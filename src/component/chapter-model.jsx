@@ -3,6 +3,8 @@ import { DeleteButton } from './items/delete-button';
 import { SlideSound } from './items/slide-sound';
 import { PrototypeSlide } from './items/prototype-slide';
 import {AddSlide} from './items/add-slide'
+import { TitleSLideModel } from './slides/titleSlideModel';
+import { AnimatedSimpleSlideModel } from './slides/animatedSimpleSlideModel';
 
 export function ChapterModel() {
     return <div className='chapterModel mt-4'>
@@ -15,7 +17,9 @@ export function ChapterModel() {
 
             <SlideSound/>
 
-            <PrototypeSlide/>
+            <TitleSLideModel />
+
+            <AnimatedSimpleSlideModel />
 
                 <AddSlide />
 
