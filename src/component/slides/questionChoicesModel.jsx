@@ -5,13 +5,13 @@ import { TextArea } from '../items/text-area';
 import { ImageArea } from '../items/image-area';
 import { SlideSound } from '../items/slide-sound';
 
-export function AnimatedSimpleSlideModel() {
+export function QuestionChoicesModel() {
     return <>
-    <div className="animatedSimpleSlideModel mt-4">
+    <div className="questionChoicesModel mt-4">
 
         <div className="row mt-3">
             <div className="col">
-                <h5>AnimatedSimpleSlideModel</h5>
+                <h5>QuestionChoicesModel</h5>
             </div>
             <DeleteButton />
         </div>

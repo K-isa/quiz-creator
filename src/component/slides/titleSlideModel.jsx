@@ -10,7 +10,7 @@ export function TitleSLideModel() {
 
             <div className="row mt-3">
                 <div className="col">
-                    <h4>TitleSlideModel</h4>
+                    <h5>TitleSlideModel</h5>
                 </div>
                 <DeleteButton />
             </div>
