@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function TextArea({value, onChange, name}) {
+export function TextField({value, onChange, name}) {
     
     return <>
         <div className="mt-3">

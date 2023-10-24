@@ -1,6 +1,6 @@
 import React from 'react';
 import { SelectedField } from './SelectedField';
-import { TextArea } from './text-area';
+import { TextField } from './textField';
 
 export function PrototypeSlide () {
 return <div className="titleSlideModel mt-4">
@@ -14,11 +14,11 @@ return <div className="titleSlideModel mt-4">
             </div>
 </div>
 
-<TextArea/>
+<TextField/>
 
 <SelectedField />
 
-<TextArea/>
+<TextField/>
 
 </div>
 

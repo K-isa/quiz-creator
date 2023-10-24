@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BeforeAnswerSlide } from './before-answer-slide';
 import { BeforeQuestionSlide } from './before-question-slide';
 import { QuestionSlide } from './question-slide';
-import { TextArea } from '../items/text-area';
+import { TextField } from '../items/textField';
 
 export function RoundModels() {
     const [data, setData] = useState({ sound: '' })
@@ -22,7 +22,7 @@ export function RoundModels() {
             </div>
         </div>
 
-        <TextArea value={data.sound} onChange={handleChange} name={"textArea"}></TextArea>
+        <TextField value={data.sound} onChange={handleChange} name={"TextField"}></TextField>
 
         <BeforeQuestionSlide />
 

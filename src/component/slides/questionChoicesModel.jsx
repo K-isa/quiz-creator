@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { SelectedField } from '../items/SelectedField';
-import { TextArea } from '../items/text-area';
+import { TextField } from '../items/textField';
 export function QuestionChoicesModel() {
-    const [data, setData] = useState({textArea: '', image: '', color: '', sound: ''})
+    const [data, setData] = useState({TextField: '', image: '', color: '', sound: ''})
 
     const handleChange = ({ target }) => {
         setData((prevstate) => ({ ...prevstate, [target.name]: target.value }))
@@ -20,11 +20,11 @@ export function QuestionChoicesModel() {
         </div>
         </div>
 
-        <TextArea value={data.textArea} onChange={handleChange} name={"textArea"}/>
+        <TextField value={data.TextField} onChange={handleChange} name={"TextField"}/>
 
         <SelectedField value={data.color} onChange={handleChange} name={"color"}/>
 
-        <TextArea value={data.sound} onChange={handleChange} name={"textArea"}></TextArea>
+        <TextField value={data.sound} onChange={handleChange} name={"TextField"}></TextField>
 
     </div>
 </>

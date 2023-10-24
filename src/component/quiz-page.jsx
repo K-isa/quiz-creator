@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChapterModel } from './chapter-model';
 import { RoundModels } from './round-model/round-model';
 import { AddModule } from './items/add-module';
-import { TextArea } from './items/text-area';
+import { TextField } from './items/textField';
 
 export function QuizPage() {
     const [data, setData] = useState({name: ''})
@@ -17,7 +17,7 @@ export function QuizPage() {
                 <div className="col-1"></div>
                 <div className="col-6">
                     
-                <TextArea value={data.name} onChange={handleChange} name={"name"} />
+                <TextField value={data.name} onChange={handleChange} name={"name"} />
 
                     <h1 className='mt-2'>Разделы</h1>
 

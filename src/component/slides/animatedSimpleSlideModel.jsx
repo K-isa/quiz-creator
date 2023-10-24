@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { SelectedField } from '../items/SelectedField';
-import { TextArea } from '../items/text-area';
+import { TextField } from '../items/textField';
 
 
 export function AnimatedSimpleSlideModel() {
-    const [data, setData] = useState({ textArea: 'ПРИВЕТ! ЭТО КРЯКВА КВИЗ ДОБРО ПОЖАЛОВАТЬ НА ИГРУ', image: '', color: '', sound: '' })
+    const [data, setData] = useState({ TextField: 'ПРИВЕТ! ЭТО КРЯКВА КВИЗ ДОБРО ПОЖАЛОВАТЬ НА ИГРУ', image: '', color: '', sound: '' })
 
     const handleChange = ({ target }) => {
         setData((prevstate) => ({ ...prevstate, [target.name]: target.value }))
@@ -21,13 +21,13 @@ export function AnimatedSimpleSlideModel() {
                 </div>
             </div>
 
-            <TextArea value={data.textArea} onChange={handleChange} name={"textArea"}/>
+            <TextField value={data.TextField} onChange={handleChange} name={"TextField"}/>
 
-            <TextArea value={data.image} onChange={handleChange} name={"image"} />
+            <TextField value={data.image} onChange={handleChange} name={"image"} />
 
             <SelectedField value={data.color} onChange={handleChange} name={"color"}  />
 
-            <TextArea value={data.sound} onChange={handleChange} name={"sound"} />
+            <TextField value={data.sound} onChange={handleChange} name={"sound"} />
 
         </div>
     </>

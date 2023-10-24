@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { SelectedField } from '../items/SelectedField';
-import { TextArea } from '../items/text-area';
+import { TextField } from '../items/textField';
 
 export function TitleSLideModel() {
-    const [data, setData] = useState({textArea: '', sound: ''})
+    const [data, setData] = useState({TextField: '', sound: ''})
 
     const handleChange = ({ target }) => {
         setData((prevstate) => ({ ...prevstate, [target.name]: target.value }))
@@ -21,11 +21,11 @@ export function TitleSLideModel() {
         </div>
             </div>
 
-            <TextArea value={data.textArea} onChange={handleChange} name={"textArea"}/>
+            <TextField value={data.textArea} onChange={handleChange} name={"TextField"}/>
 
             <SelectedField />
 
-            <TextArea value={data.sound} onChange={handleChange} name={"sound"}></TextArea>
+            <TextField value={data.sound} onChange={handleChange} name={"sound"}></TextField>
 
         </div>
     </>
