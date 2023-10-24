@@ -1,7 +1,4 @@
 import React from 'react';
-import { DeleteButton } from './items/delete-button';
-import { SlideSound } from './items/slide-sound';
-import { PrototypeSlide } from './items/prototype-slide';
 import {AddSlide} from './items/add-slide'
 import { TitleSLideModel } from './slides/titleSlideModel';
 import { AnimatedSimpleSlideModel } from './slides/animatedSimpleSlideModel';
@@ -12,10 +9,10 @@ export function ChapterModel() {
                 <div className="col">
                     <h3>Chapter Model</h3>
                 </div>
-                <DeleteButton/>
+                <div className="col">
+            <button type="button" className='btn btn-primary btn-sm'>Удалить слайд</button>
+        </div>
             </div>
-
-            <SlideSound/>
 
             <TitleSLideModel />
 

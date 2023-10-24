@@ -1,11 +1,13 @@
-import React from 'react';
-import { DeleteButton } from '../items/delete-button';
-import { ColorSelectForm } from '../items/color-select-form';
+import React, {useState} from 'react';
+import { SelectedField } from '../items/SelectedField';
 import { TextArea } from '../items/text-area';
-import { ImageArea } from '../items/image-area';
-import { SlideSound } from '../items/slide-sound';
-
 export function QuestionChoicesModel() {
+    const [data, setData] = useState({textArea: '', image: '', color: '', sound: ''})
+
+    const handleChange = ({ target }) => {
+        setData((prevstate) => ({ ...prevstate, [target.name]: target.value }))
+    }
+
     return <>
     <div className="questionChoicesModel mt-4">
 
@@ -13,16 +15,16 @@ export function QuestionChoicesModel() {
             <div className="col">
                 <h5>QuestionChoicesModel</h5>
             </div>
-            <DeleteButton />
+            <div className="col">
+            <button type="button" className='btn btn-primary btn-sm'>Удалить слайд</button>
+        </div>
         </div>
 
-        <TextArea />
+        <TextArea value={data.textArea} onChange={handleChange} name={"textArea"}/>
 
-        <ImageArea />
+        <SelectedField value={data.color} onChange={handleChange} name={"color"}/>
 
-        <ColorSelectForm />
-
-        <SlideSound />
+        <TextArea value={data.sound} onChange={handleChange} name={"textArea"}></TextArea>
 
     </div>
 </>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { DeleteButton } from './delete-button';
-import { ColorSelectForm } from './color-select-form';
+import { SelectedField } from './SelectedField';
 import { TextArea } from './text-area';
 
 export function PrototypeSlide () {
@@ -10,12 +9,14 @@ return <div className="titleSlideModel mt-4">
     <div className="col">
         <h4>TitleSlideModel</h4>
     </div>
-    <DeleteButton />
+    <div className="col">
+                <button type="button" className='btn btn-primary btn-sm'>Удалить слайд</button>
+            </div>
 </div>
 
 <TextArea/>
 
-<ColorSelectForm />
+<SelectedField />
 
 <TextArea/>
 

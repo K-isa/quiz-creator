@@ -1,10 +1,21 @@
 import React from 'react';
 
-export function TextArea() {
+export function TextArea({value, onChange, name}) {
+    
     return <>
-        <div className="form-floating mt-3">
-            <textarea className="form-control" placeholder="ПРИВЕТ! ЭТО КРЯКВА КВИЗ ДОБРО ПОЖАЛОВАТЬ НА ИГРУ" id="floatingTextarea2" style={{ height: '100%' }}></textarea>
-            <label for="floatingTextarea2">Текст слайда</label>
+        <div className="mt-3">
+        <label htmlFor={name}>{name}</label>
+        <div className="input-group has-validation">
+        
+            <input
+                type='text'
+                id={name}
+                name={name}
+                value={value}
+                onChange={onChange}
+                className='form-control'
+            />
+        </div>
         </div>
     </>
 }
